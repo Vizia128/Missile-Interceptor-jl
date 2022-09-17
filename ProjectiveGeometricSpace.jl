@@ -20,4 +20,4 @@ function Space(;size = [10000.0, 10000.0, 5000.0], T = T₀, ρ = ρ₀)
 density(altitude) = ρ₀*(T₀ / (T₀ + altitude*Lᵣ))^(1 + (g₀*MM) / (R*Lᵣ))
 density(space::Space, altitude) = space.ρ*(space.T / (space.T + altitude*Lᵣ))^(1 + (g₀*MM) / (R*Lᵣ))
 density(space::Space, altitude, temperature) = space.ρ * exp((-g₀*MM*altitude) / (R*temperature))
-end
+
